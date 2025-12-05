@@ -1,2 +1,6 @@
- # Introduction
-To best build an inventory for this open world game an AVT tree will be implemented. The AVT tree will hold a string key and an int that will hold the item amount. The string will be the items name that was collected. The Format in the class will look like AVT **(string item, int amount)**
+# MultiSet Design
+## Introduction
+To best build an inventory for this open world game an AVT tree will be implemented. The AVT tree will hold a string key and an int that will hold the item amount. The string will be the items name that was collected. The Format in the class will look like  **AVLTree (string item, int amount)**. The inventory will be for the player in this single player open world game. With the AVT tree implementation there will be pros and cons, but the AVT tree is the best fit for this project.
+
+## Design Philosophy 
+The AVL tree will be used for a number of reasons. The most important is the player inventory is going to be search based. So for example if someone were to look through their inventory they will just search for the item by name. This search based inventory will add to the game difficulty, because players will have to remember what they pick up. The user will be the game player and accessing the AVL tree will be almost direct. The client that the code will be made for is the game developer themselves. AVL tree have the best search function and will be efficient. The AVL tree will also be able to take the item out of inventory to drop or move to the players hot bar or the armor that they are wearing. The efficieny of moving the item will also be good. 
