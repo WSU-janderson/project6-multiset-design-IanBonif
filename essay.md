@@ -8,9 +8,9 @@ The AVL tree will be used for a number of reasons. The most important thing is t
 ## Core Operation
 The AVL tree will be implemented to store items in the player's inventory. It will be the only items that the player will be able to move across the map with. It will be a blind or a search inventory, making it so the player can only search for items and not see the whole inventory graphically. The inventory will drop when the player dies. This means they can get all of their items back. The inventory will also have a max space. The maximum space will be on the number of keys and how much of one items they have. The max will be 200 keys, and the amount of each key will be 100. When combining inventories that will go over the max values, the user will get the root and as far down the AVL tree as they can hold for keys, and will drop anything with a combination over 100 of those items. Then the user can search and remove items to get what they want from the dead inventory into their new inventory. The player will be able to search and move items to their armor or their hot bar to use the items. 
 
-The AVL tree should get a search of **O(log(n))** as confomr by this author[1] and a drop item or move item time complexity of **O(log(n))**. The place where the item inventory will be slow is when the player combines their inventory with their player's dropped dead inventory. The AVL tree supports the functions of adding, dropping, or moving well. The only problem occurred with the combination of inventories. 
+The AVL tree should get a search of **O(log(n))** as confirmed by this author[1] and a drop item or move item time complexity of **O(log(n))**. The place where the item inventory will be slow is when the player combines their inventory with their player's dropped dead inventory. The AVL tree supports the functions of adding, dropping, or moving well. The only problem occurred with the combination of inventories. 
 
-### This is what a player search would look like in sudo code.
+### This is what a player search would look like in pseudo-code.
 ```
 //player string that was inputed in the inventory search bar
 getInput(string searchingFor)
@@ -21,11 +21,11 @@ inventory.search(searchingFor)
 ```
 
 ## Set Operations
-The set operations that would be useful are the intersection and the union. The intersection will only happen when a player picks up an item or combines to inventories. When a player picks up items from loot, the intersection will look and see what are the same and just add to the item count up to 100, and if it is not in the tree, it will just insert them up to 200 items. The intersection will also be used before a union of the new inventory and dead inventory to give the player up to 100 items that intersect. 
+The set operations that would be useful are the intersection and the union. The intersection will only happen when a player picks up an item or combines two inventories. When a player picks up items from loot, the intersection will look and see what are the same and just add to the item count up to 100, and if it is not in the tree, it will just insert them up to 200 items. The intersection will also be used before a union of the new inventory and dead inventory to give the player up to 100 items that intersect. 
 
-The union will only happen when a player goes to get their dead inventory and will unionize as much as it can, up to 200, after the intersection happens to give the player up to 100 items combined from two inventories. The union will basically add the maximum amount of items that will be stored after combining items with the same key. So that means it will not be an exact union, but there is a chance it could be. It is possible to union AVL trees as this author does it[2]. 
+The union will only happen when a player goes to get their dead inventory and will unionize as much as it can, up to 200, after the intersection happens to give the player up to 100 items combined from two inventories. The union will basically add the maximum amount of items that will be stored after combining items with the same key. So that means it will not be an exact union, but there is a chance it could be. It is possible to union AVL trees as this author does [2]. 
 
-### This is what combining two inventories would look like in sudo code.
+### This is what combining two inventories would look like in pseudo-code.
 
 ```
 //function adds items up to 100 if intersected and returns the new AVLtree of inventory  
@@ -38,7 +38,7 @@ AVLtree union(AVLtree deadInventory, AVLTree inventory)
 }
 ```
 
-This showes part of the picUpDeadInventory function. This part will only run fully if both inventories can be directly unioned.
+This shows part of the picUpDeadInventory function. This part will only run fully if both inventories can be directly union.
 
 ## Extension Feature
 
