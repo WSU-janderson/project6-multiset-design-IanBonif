@@ -10,6 +10,16 @@ The AVL tree will be implemented to store items in the player's inventory. It wi
 
 The AVL tree should get a search of **O(log(n))** as confomr by this author[1] and a drop item or move item time complexity of **O(log(n))**. The place where the item inventory will be slow is when the player combines their inventory with their player's dropped dead inventory. The AVL tree supports the functions of adding, dropping, or moving well. The only problem occurred with the combination of inventories. 
 
+### This is what a player search would look like in sudo code.
+```
+//player string that was inputed in the inventory search bar
+getInput(string searchingFor)
+
+//calling the search function on the inventory...  this function has the option to return a node
+inventory.search(searchingFor)
+
+```
+
 ## Set Operations
 The set operations that would be useful are the intersection and the union. The intersection will only happen when a player picks up an item or combines to inventories. When a player picks up items from loot, the intersection will look and see what are the same and just add to the item count up to 100, and if it is not in the tree, it will just insert them up to 200 items. The intersection will also be used before a union of the new inventory and dead inventory to give the player up to 100 items that intersect. 
 
