@@ -17,14 +17,16 @@ The union will only happen when a player goes to get their dead inventory and wi
 
 ### This is what combining two inventories would look like in sudo code.
 
-``//function adds items up to 100 if intersected and returns the new AVLtree of inventory  
+```
+//function adds items up to 100 if intersected and returns the new AVLtree of inventory  
 AVLtree intersection_with(AVLtree deadInventory, AVLTree inventory)  
 
 //checks if it can do a direct union instead of adding up to the max amount of possible from deadInventory  
 if(both inventories less then 200 keys){  
 //direct union of trees  
 AVLtree union(AVLtree deadInventory, AVLTree inventory)  
-}``
+}
+```
 
 This showes part of the picUpDeadInventory function. This part will only run fully if both inventories can be directly unioned.
 
