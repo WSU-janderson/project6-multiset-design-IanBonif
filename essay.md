@@ -15,6 +15,21 @@ The set operations that would be useful are the intersection and the union. The 
 
 The union will only happen when a player goes to get their dead inventory and will unionize as much as it can, up to 200, after the intersection happens to give the player up to 100 items combined from two inventories. The union will basically add the maximum amount of items that will be stored after combining items with the same key. So that means it will not be an exact union, but there is a chance it could be. 
 
+### This is what combining two inventories would look like in sudo code.
+
+**
+//function adds items up to 100 if intersected and returns the new AVLtree of inventory
+AVLtree intersection_with(AVLtree deadInventory, AVLTree inventory)
+
+//checks if it can do a direct union instead of adding up to the max amount of possible from deadInventory
+if(both inventories less then 200 keys){
+//direct union of trees
+AVLtree union(AVLtree deadInventory, AVLTree inventory)
+}
+**
+
+This showes part of the picUpDeadInventory function. This part will only run fully if both inventories can be directly unioned.
+
 ## Extension Feature
 
 ## Sources
