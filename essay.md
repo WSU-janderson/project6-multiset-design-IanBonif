@@ -11,3 +11,9 @@ The AVL tree will be implemented to store items in the players inventory. It wil
 The AVL tree should get a search of **O(log(n))** and a drop item or move item time complexity of **O(log(n))**. The place where the item inventory will be slow is when the player combines their inventory with their players dropped dead inventory. The AVL tree supports the function of adding, dropping, or moving well. The only problem happened with the combining of inventories. 
 
 ## Set Operations
+The set operations that would be usefull are the intersection with and union. The intersection with will only happen when a player picks up and item or conbimes to inventorys. When a player picks up items from loot the intersection will look and see what are the same and just add to the item count up to 100 and if it is not in the tree it will just insert them up to 200 items. The intersection with will also be used before a union of the new intventory and dead inventory to give the player up to 100 of the items that intersect. 
+
+The union will only happen when a player goes to get their dead inventory and will union as much as it can up to 200 after them intersection happens to give the player up to a 100 of the item combined from to inventories. The union will basically add the max amount of item that will be stored after combining items with the same key. So that means it will not be an exact union, but there is a chance it could be. 
+
+## Extension Feature
+
