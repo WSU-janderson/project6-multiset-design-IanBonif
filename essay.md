@@ -43,8 +43,8 @@ AVLtree union(AVLtree deadInventory, AVLTree inventory)
 This shows part of the picUpDeadInventory function. This part will only run fully if both inventories can be directly union.
 
 ## Extension Feature
-The extension feature add to the AVL tree will be to move. This will move a node to the ground which is the drop function or to armor or hot bar to be used.
-The move extension will make it so the player can interact with the items in their inventory and they will be able wear armor if they collect some. The move will will just be a removal while adding the node to a different location. The complexity will still be **O(log(n))** and will just delete the node from the AVL tree inventory. 
+The extension feature added to the AVL tree will be to move. This will move a node to the ground, which is the drop function, or to the armor or hot bar to be used.
+The move extension will make it so the player can interact with the items in their inventory, and they will be able to wear armor if they collect some. The move will just be a removal while adding the node to a different location. The complexity will still be **O(log(n))** and will just delete the node from the AVL tree inventory. 
 
 ### This is what move will look like in pseudo-code.
 
@@ -63,12 +63,12 @@ This is the code for moving to armor.
 
 ## UML Diagram
 ![This is a UML Diagram for the AVL tree class](Screenshot2025-12-05193121.png)
-All the functions are public so the game engine can use them willingly. The key and value are private because these should only change through function of the class.
+All the functions are public, so the game engine can use them willingly. The key and value are private because these should only change through the function of the class.
 
 ## Trade-off Analysis
-The sequence or linked list was another option for the structure of the inventory. Sense this was a search based inventory and search for a linked list is **O(n)** the sequence could not out preform the AVL tree. Along those line it would also be slower to find items to remove them. That is basically what the inventory needs to do it the AVL tree is a better fit. The Linked list would be easier to union with code wise, but that would only happen every once and a while in game play. Both would be close is size complexity and would have a cap of 200 nodes.
+The sequence or linked list was another option for the structure of the inventory. Since this was a search-based inventory, and search for a linked list is **O(n)**, the sequence could not outperform the AVL tree. Along those lines it would also be slower to find items to remove them. That is basically what the inventory needs to do it the AVL tree is a better fit. The linked list would be easier to union with code-wise, but that would only happen every once and a while in gameplay. Both would be close is size complexity and would have a cap of 200 nodes.
 
-### This is a chart of the time complexities of both Sequence and AVL tree and the basic functions needed for inventory
+### This is a chart of the time complexities of both the Sequence and AVL tree, and the basic functions needed for inventory
 
 |        |Sequence|AVL tree |
 |:------:|:------:|:-------:|
@@ -77,7 +77,7 @@ The sequence or linked list was another option for the structure of the inventor
 |search()|O(n)    |O(log(b))|
 |Union() |O(n * m)|O(n * m) |
 
-The n stands the size of one and m is the size of the other. 
+The n stands for the size of one, and m is the size of the other. 
 
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
