@@ -20,6 +20,8 @@ inventory.search(searchingFor)
 
 ```
 
+This is the code for a search made by a player
+
 ## Set Operations
 The set operations that would be useful are the intersection and the union. The intersection will only happen when a player picks up an item or combines two inventories. When a player picks up items from loot, the intersection will look and see what are the same and just add to the item count up to 100, and if it is not in the tree, it will just insert them up to 200 items. The intersection will also be used before a union of the new inventory and dead inventory to give the player up to 100 items that intersect. 
 
@@ -41,6 +43,23 @@ AVLtree union(AVLtree deadInventory, AVLTree inventory)
 This shows part of the picUpDeadInventory function. This part will only run fully if both inventories can be directly union.
 
 ## Extension Feature
+The extension feature add to the AVL tree will be to move. This will move a node to the ground which is the drop function or to armor or hot bar to be used.
+The move extension will make it so the player can interact with the items in their inventory and they will be able wear armor if they collect some. The move will will just be a removal while adding the node to a different location. The complexity will still be **O(log(n))** and will just delete the node from the AVL tree inventory. 
+
+### This is what move will look like in pseudo-code.
+
+```
+// the use will first get the node from a search then do this
+
+inventory.move(node, AVLtree armor){
+if(it is armor and slot not full){
+armor.add(node)
+inventory.remove(node) }
+}
+
+```
+
+This is the code for moving to armor.
 
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
