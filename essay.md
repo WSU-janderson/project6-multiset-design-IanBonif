@@ -65,6 +65,19 @@ This is the code for moving to armor.
 ![This is a UML Diagram for the AVL tree class](Screenshot2025-12-05193121.png)
 All the functions are public so the game engine can use them willingly. The key and value are private because these should only change through function of the class.
 
+## Trade-off Analysis
+The sequence or linked list was another option for the structure of the inventory. Sense this was a search based inventory and search for a linked list is **O(n)** the sequence could not out preform the AVL tree. Along those line it would also be slower to find items to remove them. That is basically what the inventory needs to do it the AVL tree is a better fit. The Linked list would be easier to union with code wise, but that would only happen every once and a while in game play.
+
+### This is a chart of the time complexities of both Sequence and AVL tree and the basic functions needed for inventory
+
+|        |Sequence|AVL tree |
+|:------:|:------:|:-------:|
+|move()  |O(n)    |O(log(n))|
+|remove()|O(n)    |O(log(n))|
+|search()|O(n)    |O(log(b))|
+|Union() |O(n * m)|O(n * m) |
+
+The n stands the size of one and m is the size of the other. 
 
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
