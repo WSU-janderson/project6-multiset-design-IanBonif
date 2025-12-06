@@ -63,6 +63,8 @@ This is the code for moving to armor.
 
 ## UML Diagram
 ![This is a UML Diagram for the AVL tree class](uml.png)
+All the functions are 
+
 
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
