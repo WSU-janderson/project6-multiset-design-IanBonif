@@ -62,8 +62,8 @@ inventory.remove(node) }
 This is the code for moving to armor.
 
 ## UML Diagram
-![This is a UML Diagram for the AVL tree class](uml.png)
-All the functions are 
+![This is a UML Diagram for the AVL tree class](Screenshot2025-12-05193121.png)
+All the functions are public so the game engine can use them willingly. The key and value are private because these should only change through function of the class.
 
 
 ## Sources
