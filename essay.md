@@ -81,5 +81,5 @@ The n stands the size of one and m is the size of the other.
 
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
-[2] “Union declaration,” cppreference.com, https://en.cppreference.com/w/cpp/language/union.html (accessed Dec. 5, 2025). 
+[2] “Union declaration,” cppreference.com, https://en.cppreference.com/w/cpp/language/union.html (accessed Dec. 5, 2025).  
 [3] G. Blelloch, D. Ferizovic, and Y. Sun, “Joinable parallel balanced binary trees,” ACM Transactions on Parallel Computing, vol. 9, no. 2, pp. 1–41, Apr. 2022. doi:10.1145/3512769 
