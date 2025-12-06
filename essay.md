@@ -82,7 +82,7 @@ The n stands for the size of one, and m is the size of the other.
 If the inventory were a sequence it would be a displayed inventory. All the nodes would be displayed in a scrollable list to function as the users inventory. This would take the away from the games difficulty and it would be easier for the player to move and remove items. The key and value in the sequence would be the same is in the AVL tree. With this design players would still also union with dead inventories and it would be the same time complexity. 
 
 ## Evaluation Plan
-
+First test would be to add to the inventory and then find and remove that item. Then test the move function to make sure it is removed and added to the correct AVL tree. Also test that an items value gets added to if they pick up another of that item. Then test to see if it only picks up 100 and exactly 100 of a single item. Next test the union and intersection to see if it will only union at 200 or less and intersection works. Finally test the code that just takes the first items so many items after a intersection with the dead inventory. 
 
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
