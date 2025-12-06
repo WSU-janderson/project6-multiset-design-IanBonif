@@ -84,6 +84,9 @@ If the inventory were a sequence it would be a displayed inventory. All the node
 ## Evaluation Plan
 First test would be to add to the inventory and then find and remove that item. Then test the move function to make sure it is removed and added to the correct AVL tree. Also test that an items value gets added to if they pick up another of that item. Then test to see if it only picks up 100 and exactly 100 of a single item. Next test the union and intersection to see if it will only union at 200 or less and intersection works. Finally test the code that just takes the first items so many items after a intersection with the dead inventory. 
 
+## Conclusion
+The AVL tree as a search only inventory works perfectly. The design is simple and uses the best part of the AVL tree the **O(log(n))** search. The trade offs are game difficulty and the union speed. The space complexity does not matter in the design because the tree has a maxuim size. This design also is effective at moving and removing items from the inventory. The design works well because the player will be able to use the inventory without knowing what it is doing. The design takes everything and makes a class inventory that works fit the game. The design takes the simply thing off searching a AVL tree and builds it into an inventory. 
+
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
 [2] “Union declaration,” cppreference.com, https://en.cppreference.com/w/cpp/language/union.html (accessed Dec. 5, 2025).  
