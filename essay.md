@@ -78,6 +78,11 @@ The sequence or linked list was another option for the structure of the inventor
 |Union() |O(n * m)|O(n * m) |
 
 The n stands for the size of one, and m is the size of the other. 
+## Alternative Design Sketch
+If the inventory were a sequence it would be a displayed inventory. All the nodes would be displayed in a scrollable list to function as the users inventory. This would take the away from the games difficulty and it would be easier for the player to move and remove items. The key and value in the sequence would be the same is in the AVL tree. With this design players would still also union with dead inventories and it would be the same time complexity. 
+
+## Evaluation Plan
+
 
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
