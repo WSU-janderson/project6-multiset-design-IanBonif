@@ -23,9 +23,9 @@ inventory.search(searchingFor)
 This is the code for a search made by a player
 
 ## Set Operations
-The set operations that would be useful are the intersection and the union. The intersection will only happen when a player picks up an item or combines two inventories. When a player picks up items from loot, the intersection will look and see what are the same and just add to the item count up to 100, and if it is not in the tree, it will just insert them up to 200 items. The intersection will also be used before a union of the new inventory and dead inventory to give the player up to 100 items that intersect. 
+The set operations that would be useful are the intersection and the union. The intersection will only happen when a player picks up an item or combines two inventories. When a player picks up items from loot, the intersection will look and see what are the same and just add to the item count up to 100, and if it is not in the tree, it will just insert them up to 200 items. The intersection will also be used before a union of the new inventory and dead inventory to give the player up to 100 items that intersect. This website shows what a union does with a C++ example[2].
 
-The union will only happen when a player goes to get their dead inventory and will unionize as much as it can, up to 200, after the intersection happens to give the player up to 100 items combined from two inventories. The union will basically add the maximum amount of items that will be stored after combining items with the same key. So that means it will not be an exact union, but there is a chance it could be. It is possible to union AVL trees as this author does [2]. 
+The union will only happen when a player goes to get their dead inventory and will unionize as much as it can, up to 200, after the intersection happens to give the player up to 100 items combined from two inventories. The union will basically add the maximum amount of items that will be stored after combining items with the same key. So that means it will not be an exact union, but there is a chance it could be. It is possible to union AVL trees as this author does [3]. 
 
 ### This is what combining two inventories would look like in pseudo-code.
 
@@ -66,7 +66,7 @@ This is the code for moving to armor.
 All the functions are public so the game engine can use them willingly. The key and value are private because these should only change through function of the class.
 
 ## Trade-off Analysis
-The sequence or linked list was another option for the structure of the inventory. Sense this was a search based inventory and search for a linked list is **O(n)** the sequence could not out preform the AVL tree. Along those line it would also be slower to find items to remove them. That is basically what the inventory needs to do it the AVL tree is a better fit. The Linked list would be easier to union with code wise, but that would only happen every once and a while in game play.
+The sequence or linked list was another option for the structure of the inventory. Sense this was a search based inventory and search for a linked list is **O(n)** the sequence could not out preform the AVL tree. Along those line it would also be slower to find items to remove them. That is basically what the inventory needs to do it the AVL tree is a better fit. The Linked list would be easier to union with code wise, but that would only happen every once and a while in game play. Both would be close is size complexity and would have a cap of 200 nodes.
 
 ### This is a chart of the time complexities of both Sequence and AVL tree and the basic functions needed for inventory
 
@@ -81,4 +81,5 @@ The n stands the size of one and m is the size of the other.
 
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
-[2] G. Blelloch, D. Ferizovic, and Y. Sun, “Joinable parallel balanced binary trees,” ACM Transactions on Parallel Computing, vol. 9, no. 2, pp. 1–41, Apr. 2022. doi:10.1145/3512769 
+[2] “Union declaration,” cppreference.com, https://en.cppreference.com/w/cpp/language/union.html (accessed Dec. 5, 2025). 
+[3] G. Blelloch, D. Ferizovic, and Y. Sun, “Joinable parallel balanced binary trees,” ACM Transactions on Parallel Computing, vol. 9, no. 2, pp. 1–41, Apr. 2022. doi:10.1145/3512769 
