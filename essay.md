@@ -61,6 +61,9 @@ inventory.remove(node) }
 
 This is the code for moving to armor.
 
+## UML Diagram
+![This is a UML Diagram for the AVL tree class](uml.png)
+
 ## Sources
 [1] Information and control | international conference on foundations of computation theory | sciencedirect.com by elsevier, https://www.sciencedirect.com/journal/information-and-control/vol/64/issue/1 (accessed Dec. 5, 2025).  
 [2] G. Blelloch, D. Ferizovic, and Y. Sun, “Joinable parallel balanced binary trees,” ACM Transactions on Parallel Computing, vol. 9, no. 2, pp. 1–41, Apr. 2022. doi:10.1145/3512769 
